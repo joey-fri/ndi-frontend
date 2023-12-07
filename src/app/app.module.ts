@@ -11,6 +11,7 @@ import { AnswerComponent } from './pages/answer/answer.component';
 import { EndComponent } from './pages/end/end.component';
 import { GraphComponent } from './components/graph/graph.component';
 import { HomeComponent } from './pages/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -34,7 +35,8 @@ export function createTranslateLoader(http: HttpClient) {
             deps: [HttpClient]
         }
     }),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

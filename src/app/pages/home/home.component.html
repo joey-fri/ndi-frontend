@@ -1,7 +1,14 @@
 
 <div class="center-container">
   <div class="button-container">
-    <button class="language-button" routerLink="/question" mat-raised-button color="primary">Primary</button>
-    <button class="play-button" routerLink="/question" mat-raised-button color="warn">Warn</button>
+    <h1 class="game-name">{{"HOME.GAMENAME" | translate}}</h1>
+    <mat-form-field>
+      <mat-select>
+        <mat-option value="fr">Français</mat-option>
+        <mat-option value="en">English</mat-option>
+        <mat-option value="es">Espagñol</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button class="play-button" routerLink="/question" mat-raised-button color="warn">{{"HOME.START" | translate}}</button>
   </div>
 </div>

@@ -1,3 +1,7 @@
 {
-    "START": "Start"
+  "HOME":
+  {
+    "START": "Start",
+    "GAMENAME": "Question for a climate"
+  }
 }

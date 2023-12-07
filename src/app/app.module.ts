@@ -12,6 +12,7 @@ import { EndComponent } from './pages/end/end.component';
 import { GraphComponent } from './components/graph/graph.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -27,6 +28,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   imports: [
     BrowserModule,
+    MatButtonModule,
     HttpClientModule,
     TranslateModule.forRoot({
         loader: {

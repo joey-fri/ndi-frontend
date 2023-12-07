@@ -1,0 +1,27 @@
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.play-button {
+  align-self: center;
+  justify-self: center;
+}
+
+.play-button2 {
+
+}

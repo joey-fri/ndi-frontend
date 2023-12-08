@@ -7,5 +7,10 @@
   "END":
   {
     "RESTART": "Rejouer"
+  },
+  "QUESTION":
+  {
+    "END": "Terminer",
+    "NEXT": "Suivant"
   }
 }

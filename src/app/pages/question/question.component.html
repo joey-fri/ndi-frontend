@@ -1,14 +1,27 @@
 <div class="div-noire">
-    <!-- Emplacement noir -->
+  <!-- Emplacement noir -->
+</div>
+
+<div *ngIf="questions.length > 0" class="question">
+  {{ questions[currentQuestionIndex].Question }}
+</div>
+
+<div class="response-container" *ngIf="questions.length > 0">
+  <div class="response-wrapper" *ngFor="let answer of [1,2,3]; let i = index">
+    <mat-card class="response" [ngClass]="{'selected': selectedAnswer === i, 'small-font': isAnyAnswerSelected}" (click)="selectAnswer(i)">
+      {{ questions[currentQuestionIndex]['Answer_' + answer] }}
+    </mat-card>
+    <mat-card class="explanation" *ngIf="isAnyAnswerSelected">
+      {{ questions[currentQuestionIndex]['Explication_' + (i + 1)] }}
+    </mat-card>
   </div>
-  
-  <div class="question">
-    Abandonne-t-on les voitures thermiques ?
-  </div>
-  
-  <div class="response-container">
-    <mat-card class="response" (click)="selectAnswer('Réponse 1')">On interdit la vente des voiture thermique, et on met en place une prime sur les voitures électriques</mat-card>
-    <mat-card class="response" (click)="selectAnswer('Réponse 2')">On filtre les ventes jusqu'à ce qu'on est une solution viable pour les voitures électriques</mat-card>
-    <mat-card class="response" (click)="selectAnswer('Réponse 3')">On n'abandonne pas les voitures thermiques</mat-card>
-  </div>
-  
+
+  <!-- Bouton Suivant ou Terminer en fonction de la question en cours -->
+  <button 
+    style="background-color: blue; color: white; font-size: 1.5rem;" 
+    mat-button 
+    *ngIf="isAnyAnswerSelected" 
+    (click)="nextQuestion()">
+      {{ currentQuestionIndex === questions.length - 1 ? end : next }}
+  </button>
+</div>

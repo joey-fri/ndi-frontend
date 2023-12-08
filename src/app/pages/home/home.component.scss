@@ -20,10 +20,14 @@
   box-shadow: 0rem 0rem 0.125rem rgba(0, 0, 0, 0.25);
   border-radius: 0.25rem;
   //opacity: 50%;
+  justify-content: center;
+  align-items: center;
   padding: 5rem;
   display: flex;
   flex-direction: column;
   position: relative;
+  height: 20%;
+  width: 20%;
 }
 .play-button {
   top: 2rem;

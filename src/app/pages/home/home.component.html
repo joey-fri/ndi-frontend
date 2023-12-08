@@ -3,7 +3,7 @@
   <div class="button-container">
     <h1 class="game-name">{{"HOME.GAMENAME" | translate}}</h1>
     <mat-form-field>
-      <mat-select [(value)]="selectedLanguage">
+      <mat-select [(value)]="selectedLanguage"  (selectionChange)="onLanguageChange()">
         <mat-option value="fr">Français</mat-option>
         <mat-option value="en">English</mat-option>
         <mat-option value="es">Espagñol</mat-option>

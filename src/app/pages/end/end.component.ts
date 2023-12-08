@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './end.component.html',
   styleUrls: ['./end.component.scss']
 })
-export class EndComponent {
 
+export class EndComponent {
+  score = 1;
 }

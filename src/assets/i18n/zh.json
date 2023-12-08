@@ -1,18 +1,21 @@
 {
     "HOME": {
-        "START": "开始",
+        "START": "玩游戏",
         "GAMENAME": "气候问题"
     },
     "END": {
-        "RESTART": "重试"
+        "RESTART": "重新开始",
+        "GAME_OVER": "在人类试图弥补之后，由于贪婪而灭绝。游戏结束",
+        "END_VICTORY": "恭喜，您成功拯救了人类！",
+        "END_MEDIUM": "您成功保护了人类，但气候变化的后果仍然存在。"
     },
     "QUESTION": {
         "END": "结束",
         "NEXT": "下一个"
     },
     "GRAPH": {
-        "TITLE": "CO2排放",
-        "YAXIS": "CO2排放",
+        "TITLE": "二氧化碳排放",
+        "YAXIS": "二氧化碳排放",
         "XAXIS": {
             "QUESTION": "问题"
         }

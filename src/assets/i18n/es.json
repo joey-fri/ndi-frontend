@@ -1,13 +1,16 @@
 {
     "HOME": {
-        "START": "Iniciar",
-        "GAMENAME": "Pregunta para el clima"
+        "START": "Jugar",
+        "GAMENAME": "Pregunta por el Clima"
     },
     "END": {
-        "RESTART": "Intentar de nuevo"
+        "RESTART": "Jugar de Nuevo",
+        "GAME_OVER": "Después de que la humanidad intentó enmendar sus acciones, fue superada por su propia codicia y se extinguió. FIN DEL JUEGO",
+        "END_VICTORY": "¡Felicidades, has logrado salvar a la humanidad!",
+        "END_MEDIUM": "Has logrado preservar a la humanidad, pero las consecuencias del cambio climático aún están presentes."
     },
     "QUESTION": {
-        "END": "Fin",
+        "END": "Terminar",
         "NEXT": "Siguiente"
     },
     "GRAPH": {

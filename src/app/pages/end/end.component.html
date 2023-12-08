@@ -1,6 +1,6 @@
 <div class="center-container">
   <div class="box">
-    <div *ngIf="score === 0; else scoreNotzero" >
+    <div *ngIf="getScore() === 0; else scoreNotzero" >
       <h1>Oh no!</h1>
       <h2>You didn't get any questions right.</h2>
       <h2>Try again!</h2>

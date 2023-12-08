@@ -4,7 +4,10 @@
     "GAMENAME": "Question pour un climat"
   },
   "END": {
-    "RESTART": "Rejouer"
+    "RESTART": "Rejouer",
+    "GAME_OVER" : "Après que l'humanité est essayé de se rattraper, elle se fit elle-même rattraper par sa propre cupidité et s’éteignit. GAME OVER",
+    "FIN_VICTOIRE": "Félicitations, vous avez réussi à sauver l'humanité !",
+    "FIN_MITIGE": "Vous avez réussi à préserver l'humanité, mais les conséquences du réchauffement climatique sont toujours présentes."
   },
   "QUESTION": {
     "END": "Terminer",

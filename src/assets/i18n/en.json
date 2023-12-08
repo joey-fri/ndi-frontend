@@ -1,3 +1,10 @@
 {
-    "START": "Start"
+    "START": "Start",
+    "GRAPH":{
+      "TITLE": "CO2 emissions",
+      "YAXIS": "CO2 emissions",
+      "XAXIS": {
+        "QUESTION": "Question"
+      }
+    }
 }

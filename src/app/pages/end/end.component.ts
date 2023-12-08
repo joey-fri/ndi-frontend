@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 
 export class EndComponent {
   score = 1;
+
+  removeIdQuestion() {
+    localStorage.removeItem('id');
+  }
 }
+
+

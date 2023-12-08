@@ -3,5 +3,9 @@
   {
     "START": "Jouer",
     "GAMENAME": "Question pour un climat"
+  },
+  "END":
+  {
+    "RESTART": "Rejouer"
   }
 }

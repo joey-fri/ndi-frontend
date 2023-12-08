@@ -3,5 +3,9 @@
   {
     "START": "Start",
     "GAMENAME": "Question for a climate"
+  },
+  "END":
+  {
+    "RESTART": "Try again"
   }
 }

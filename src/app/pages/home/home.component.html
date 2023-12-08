@@ -5,7 +5,13 @@
       <mat-select [(value)]="selectedLanguage"  (selectionChange)="onLanguageChange()">
         <mat-option value="fr">Français</mat-option>
         <mat-option value="en">English</mat-option>
-        <mat-option value="es">Espagñol</mat-option>
+        <mat-option value="es">Español</mat-option> <!-- Espagnol -->
+        <mat-option value="de">Deutsch</mat-option> <!-- Allemand -->
+        <mat-option value="ru">Русский</mat-option> <!-- Russe -->
+        <mat-option value="ar">العربية</mat-option> <!-- Arabe -->
+        <mat-option value="zh">中文</mat-option> <!-- Chinois -->
+        <mat-option value="ja">日本語</mat-option> <!-- Japonais -->
+        
       </mat-select>
     </mat-form-field>
     <button class="play-button" routerLink="/question" mat-raised-button color="warn">{{"HOME.START" | translate}}</button>

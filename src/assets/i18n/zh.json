@@ -1,0 +1,20 @@
+{
+    "HOME": {
+        "START": "开始",
+        "GAMENAME": "气候问题"
+    },
+    "END": {
+        "RESTART": "重试"
+    },
+    "QUESTION": {
+        "END": "结束",
+        "NEXT": "下一个"
+    },
+    "GRAPH": {
+        "TITLE": "CO2排放",
+        "YAXIS": "CO2排放",
+        "XAXIS": {
+            "QUESTION": "问题"
+        }
+    }
+}

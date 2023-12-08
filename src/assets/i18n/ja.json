@@ -1,0 +1,20 @@
+{
+    "HOME": {
+        "START": "開始",
+        "GAMENAME": "気候に関する質問"
+    },
+    "END": {
+        "RESTART": "再試行"
+    },
+    "QUESTION": {
+        "END": "終了",
+        "NEXT": "次へ"
+    },
+    "GRAPH": {
+        "TITLE": "CO2排出量",
+        "YAXIS": "CO2排出量",
+        "XAXIS": {
+            "QUESTION": "質問"
+        }
+    }
+}

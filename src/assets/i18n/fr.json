@@ -5,10 +5,11 @@
   },
   "END": {
     "RESTART": "Rejouer",
-    "GAME_OVER" : "Après que l'humanité est essayé de se rattraper, elle se fit elle-même rattraper par sa propre cupidité et s’éteignit. GAME OVER",
+    "GAME_OVER" : "Après que l'humanité a essayé de se rattraper, elle s'est fait elle-même rattraper par sa propre cupidité et s’est éteinte. GAME OVER",
     "END_VICTORY": "Félicitations, vous avez réussi à sauver l'humanité !",
     "END_MEDIUM": "Vous avez réussi à préserver l'humanité, mais les conséquences du réchauffement climatique sont toujours présentes."
   },
+
   "QUESTION": {
     "END": "Terminer",
     "NEXT": "Suivant"

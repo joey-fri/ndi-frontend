@@ -1,12 +1,12 @@
 <div class="center-container">
   <div class="box">
-    <div *ngIf="getScore() <= 3" >
+    <div *ngIf="score <= 3" >
       {{"END.END_VICTORY" | translate}}
     </div>
-    <div *ngIf="getScore() > 3 && getScore() < 7 " >
+    <div *ngIf="score > 3 && score < 7 " >
       {{"END.END_MEDIUM" | translate}}
     </div>
-    <div *ngIf="getScore() >= 7" >
+    <div *ngIf="score >= 7" >
       {{"END.GAME_OVER" | translate}}
     </div>
     <button mat-raised-button color="primary" (click)="removeQuestions()"  routerLink="/start">{{"END.RESTART" | translate}}</button>

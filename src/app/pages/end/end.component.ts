@@ -11,25 +11,27 @@ import { TranslateService } from '@ngx-translate/core';
 
 export class EndComponent implements OnInit {
   questions: any[] = [];
-
+  score : number = 0;
   constructor(private ndiBackendService: NdiBackendService,
     private translate: TranslateService, private router: Router) { }
 
     selectedLanguage: string = localStorage.getItem('selectedLanguage') || 'FR';
 
   async ngOnInit() {
-    await this.ndiBackendService.getQuestions(this.selectedLanguage).subscribe((data) => {
+    this.ndiBackendService.getQuestions(this.selectedLanguage).subscribe((data) => {
       this.questions = data;
+      this.getScore();
     });
 
   }
 
   getScore(){
-    this.ngOnInit();
     let res = 0;
-    for(let i = 1; i <= 5; i++){
+    for(let i = 0; i < 5; i++){
       let nb_inf = 0
       let ourScore = parseInt(localStorage.getItem('Question_' + (i)) as string);
+      console.log(this.questions);
+
       for(let j = 0 ; j < 3 ; j++)
       {
         const score = this.questions[i]['Score_' + (j)];
@@ -43,8 +45,8 @@ export class EndComponent implements OnInit {
         res = res + 2;
       }
     }
-
-    return res;
+    console.log(res);
+    this.score = res;
   }
 
   removeQuestions() {

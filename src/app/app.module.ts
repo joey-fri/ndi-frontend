@@ -45,7 +45,7 @@ export function createTranslateLoader(http: HttpClient) {
         }
     }),
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
     HighchartsChartModule
   ],
   providers: [],

@@ -1,2 +1,14 @@
-<p>question works!</p>
-<button routerLink="/answer">Aller à la Réponse</button>
+<div class="div-noire">
+    <!-- Emplacement noir -->
+  </div>
+  
+  <div class="question">
+    Abandonne-t-on les voitures thermiques ?
+  </div>
+  
+  <div class="response-container">
+    <mat-card class="response" (click)="selectAnswer('Réponse 1')">On interdit la vente des voiture thermique, et on met en place une prime sur les voitures électriques</mat-card>
+    <mat-card class="response" (click)="selectAnswer('Réponse 2')">On filtre les ventes jusqu'à ce qu'on est une solution viable pour les voitures électriques</mat-card>
+    <mat-card class="response" (click)="selectAnswer('Réponse 3')">On n'abandonne pas les voitures thermiques</mat-card>
+  </div>
+  

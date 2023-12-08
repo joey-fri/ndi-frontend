@@ -13,21 +13,26 @@ export class QuestionComponent implements OnInit {
   currentQuestionIndex: number = 0;
   selectedAnswer: number | null = null;
   isAnyAnswerSelected: boolean = false;
-  end: string =  this.translate.instant(`QUESTION.END`);
+  end: string = this.translate.instant(`QUESTION.END`);
   next: string = this.translate.instant(`QUESTION.NEXT`);
   selectedLanguage: string = localStorage.getItem('selectedLanguage') || 'FR';
 
   constructor(private ndiBackendService: NdiBackendService,
-    private translate: TranslateService ,private router: Router) { }
+    private translate: TranslateService, private router: Router) { }
 
   async ngOnInit() {
     await this.ndiBackendService.getQuestions(this.selectedLanguage).subscribe((data) => {
       this.questions = data;
     });
- 
+
   }
 
   selectAnswer(index: number) {
+    // Vérifier si une réponse a déjà été sélectionnée
+    if (this.isAnyAnswerSelected) {
+      return; // Ne rien faire si une réponse a déjà été sélectionnée
+    }
+
     this.selectedAnswer = index;
     this.isAnyAnswerSelected = true;
     const score = this.questions[this.currentQuestionIndex]['Score_' + (index + 1)];

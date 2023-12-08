@@ -7,7 +7,6 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { QuestionComponent } from './pages/question/question.component';
-import { AnswerComponent } from './pages/answer/answer.component';
 import { EndComponent } from './pages/end/end.component';
 import { GraphComponent } from './components/graph/graph.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -25,7 +24,6 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [
     AppComponent,
     QuestionComponent,
-    AnswerComponent,
     EndComponent,
     GraphComponent,
     HomeComponent

@@ -48,12 +48,28 @@ export class GraphComponent {
     this.handleUpdate()
   }
 
-  setGraphMinValue(){
+  async changeText() {
     // @ts-ignore
-    this.highchartsOptions.yAxis.min = Math.min(...this.values) - 5
+    await this.setGraphTextI18n().then( () => {
+      this.setGraphValues()
+      this.setGraphMinValue()
+    })
+
+    // @ts-ignore
+    console.log(this.highchartsOptions)
+  }
+  handleUpdate(){
+    this.changeText().then(() => {
+      // @ts-ignore
+      this.updateFlag = true;
+      console.log("Final value: " + this.getFinalValue())
+    })
   }
 
-  async changeText() {
+  getFinalValue() : number{
+    return this.values[4]
+  }
+  async setGraphTextI18n() : Promise<void> {
     // @ts-ignore
     this.highchartsOptions.title.text = await this.translate.get('GRAPH.TITLE').toPromise()
     // @ts-ignore
@@ -68,33 +84,26 @@ export class GraphComponent {
       // @ts-ignore
       this.highchartsOptions.xAxis.categories.push(text as any)
     }
-
+  }
+  setGraphMinValue() : void {
+    // @ts-ignore
+    this.highchartsOptions.yAxis.min = Math.min(...this.values) - 5
+  }
+  setGraphValues() : void {
     this.values = []
     const tempValues = []
     for (let i = 1; i < 6; i++) {
+      const newValue : number = Math.floor(Math.random() * 100)-20
       if (i != 1) {
         const oldValue : number = tempValues[i - 2]
-        const newValue : number = Math.floor(Math.random() * 100)
         tempValues.push(oldValue + newValue)
       } else {
-        tempValues.push( Math.floor(Math.random() * 100))
+        tempValues.push(newValue)
       }
     }
     this.values = tempValues
-
-    this.setGraphMinValue()
-
     // @ts-ignore
     this.highchartsOptions.series[0].data = this.values as any
-
-    // @ts-ignore
-    console.log(this.highchartsOptions)
-  }
-  handleUpdate(){
-    this.changeText().then(() => {
-      // @ts-ignore
-      this.updateFlag = true;
-    })
   }
 
 }

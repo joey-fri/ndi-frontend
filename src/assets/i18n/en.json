@@ -13,4 +13,11 @@
     "END": "End",
     "NEXT": "Next"
   }
+    "GRAPH":{
+      "TITLE": "CO2 emissions",
+      "YAXIS": "CO2 emissions",
+      "XAXIS": {
+        "QUESTION": "Question"
+      }
+    }
 }

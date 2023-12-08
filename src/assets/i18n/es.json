@@ -1,0 +1,23 @@
+{
+    "HOME": {
+        "START": "Jugar",
+        "GAMENAME": "Pregunta por el Clima"
+    },
+    "END": {
+        "RESTART": "Jugar de Nuevo",
+        "GAME_OVER": "Después de que la humanidad intentó enmendar sus acciones, fue superada por su propia codicia y se extinguió. FIN DEL JUEGO",
+        "END_VICTORY": "¡Felicidades, has logrado salvar a la humanidad!",
+        "END_MEDIUM": "Has logrado preservar a la humanidad, pero las consecuencias del cambio climático aún están presentes."
+    },
+    "QUESTION": {
+        "END": "Terminar",
+        "NEXT": "Siguiente"
+    },
+    "GRAPH": {
+        "TITLE": "Emisiones de CO2",
+        "YAXIS": "Emisiones de CO2",
+        "XAXIS": {
+            "QUESTION": "Pregunta"
+        }
+    }
+}

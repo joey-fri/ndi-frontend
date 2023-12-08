@@ -1,23 +1,23 @@
 {
-  "HOME":
-  {
-    "START": "Start",
-    "GAMENAME": "Question for a climate"
+  "HOME": {
+    "START": "Play",
+    "GAMENAME": "Question for Climate"
   },
-  "END":
-  {
-    "RESTART": "Try again"
+  "END": {
+    "RESTART": "Play Again",
+    "GAME_OVER": "After humanity tried to make amends, it was overtaken by its own greed and extinguished. GAME OVER",
+    "END_VICTORY": "Congratulations, you have succeeded in saving humanity!",
+    "END_MEDIUM": "You have managed to preserve humanity, but the consequences of climate change are still present."
   },
-  "QUESTION":
-  {
+  "QUESTION": {
     "END": "End",
     "NEXT": "Next"
-  }
-    "GRAPH":{
-      "TITLE": "CO2 emissions",
-      "YAXIS": "CO2 emissions",
-      "XAXIS": {
-        "QUESTION": "Question"
-      }
+  },
+  "GRAPH": {
+    "TITLE": "CO2 Emissions",
+    "YAXIS": "CO2 Emissions",
+    "XAXIS": {
+      "QUESTION": "Question"
     }
+  }
 }

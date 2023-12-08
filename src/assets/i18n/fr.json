@@ -1,23 +1,23 @@
 {
-  "HOME":
-  {
+  "HOME": {
     "START": "Jouer",
     "GAMENAME": "Question pour un climat"
   },
-  "END":
-  {
-    "RESTART": "Rejouer"
+  "END": {
+    "RESTART": "Rejouer",
+    "GAME_OVER" : "Après que l'humanité est essayé de se rattraper, elle se fit elle-même rattraper par sa propre cupidité et s’éteignit. GAME OVER",
+    "END_VICTORY": "Félicitations, vous avez réussi à sauver l'humanité !",
+    "END_MEDIUM": "Vous avez réussi à préserver l'humanité, mais les conséquences du réchauffement climatique sont toujours présentes."
   },
-  "QUESTION":
-  {
+  "QUESTION": {
     "END": "Terminer",
     "NEXT": "Suivant"
   },
-    "GRAPH": {
-      "TITLE": "Emissions de CO2",
-      "YAXIS": "Emissions de CO2",
-      "XAXIS": {
-        "QUESTION": "Question"
-      }
+  "GRAPH": {
+    "TITLE": "Emissions de CO2",
+    "YAXIS": "Emissions de CO2",
+    "XAXIS": {
+      "QUESTION": "Question"
     }
+  }
 }

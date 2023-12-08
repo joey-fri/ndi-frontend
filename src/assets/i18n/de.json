@@ -1,0 +1,23 @@
+{
+    "HOME": {
+        "START": "Spielen",
+        "GAMENAME": "Frage für das Klima"
+    },
+    "END": {
+        "RESTART": "Erneut spielen",
+        "GAME_OVER": "Nachdem die Menschheit versucht hatte, sich zu bessern, wurde sie von ihrer eigenen Gier eingeholt und erlosch. Spiel vorbei",
+        "END_VICTORY": "Herzlichen Glückwunsch, Sie haben es geschafft, die Menschheit zu retten!",
+        "END_MEDIUM": "Sie haben es geschafft, die Menschheit zu bewahren, aber die Auswirkungen des Klimawandels sind immer noch vorhanden."
+    },
+    "QUESTION": {
+        "END": "Beenden",
+        "NEXT": "Nächste"
+    },
+    "GRAPH": {
+        "TITLE": "CO2-Emissionen",
+        "YAXIS": "CO2-Emissionen",
+        "XAXIS": {
+            "QUESTION": "Frage"
+        }
+    }
+}

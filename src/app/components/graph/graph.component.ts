@@ -20,12 +20,30 @@ export class GraphComponent {
           align: 'left'
       },
       xAxis: {
-        categories: ['']
+        categories: [''],
+        labels: {
+          style:{
+            fontSize: '1.25rem'
+          }
+        }
+      },
+      legend: {
+          itemStyle: {
+              fontSize: '1rem'
+          }
       },
       yAxis: {
           min: -30,
           title: {
-              text: " "
+              text: " ",
+              style:{
+                fontSize: '1.25rem'
+              }
+          },
+          labels: {
+              style:{
+                fontSize: '1rem'
+              }
           }
       },
       plotOptions: {
@@ -33,7 +51,11 @@ export class GraphComponent {
               label: {
                   connectorAllowed: false
               },
-              pointStart: 1
+              pointStart: 1,
+              marker: {
+                enabled: true,
+                radius: 5,
+              }
           }
       },
       series: [

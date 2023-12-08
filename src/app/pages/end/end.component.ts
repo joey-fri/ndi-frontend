@@ -27,12 +27,12 @@ export class EndComponent implements OnInit {
 
   getScore(){
     let res = 0;
-    for(let i = 0; i < 5; i++){
+    for(let i = 1; i <= 5; i++){
       let nb_inf = 0
       let ourScore = parseInt(localStorage.getItem('Question_' + (i)) as string);
       console.log(this.questions);
 
-      for(let j = 0 ; j < 3 ; j++)
+      for(let j = 1 ; j <= 3 ; j++)
       {
         const score = this.questions[i]['Score_' + (j)];
         if (score > ourScore)

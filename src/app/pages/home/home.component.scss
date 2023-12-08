@@ -1,4 +1,43 @@
+.center-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  //background-color: black;
+  background-image: url("../../../assets/images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+.button-container {
+  border-width: 0.125rem;
+  background-color: white;
+  border: 0.0625rem solid #DAE1E5;
+  border-style: solid;
+  box-shadow: 0rem 0rem 0.125rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.25rem;
+  //opacity: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 20%;
+  width: 20%;
+}
+.play-button {
+  top: 2rem;
+  //opacity: 100% !important;
+}
+
+.game-name {
+  position: relative;
+  bottom: 2rem;
+  
 eco-graph{
-  background-color: red;
   height: 100%;
 }

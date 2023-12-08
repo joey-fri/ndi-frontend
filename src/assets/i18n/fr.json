@@ -3,5 +3,10 @@
   {
     "START": "Jouer",
     "GAMENAME": "Question pour un climat"
+  },
+  "QUESTION":
+  {
+    "END": "Terminer",
+    "NEXT": "Suivant"
   }
 }

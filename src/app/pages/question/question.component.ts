@@ -31,9 +31,8 @@ export class QuestionComponent implements OnInit {
   }
 
   selectAnswer(index: number) {
-    // Vérifier si une réponse a déjà été sélectionnée
     if (this.isAnyAnswerSelected) {
-      return; // Ne rien faire si une réponse a déjà été sélectionnée
+      return;
     }
 
     this.selectedAnswer = index;
@@ -46,12 +45,10 @@ export class QuestionComponent implements OnInit {
 
   nextQuestion() {
     if (this.currentQuestionIndex < this.questions.length - 1) {
-      // Passage à la question suivante
       this.currentQuestionIndex++;
       this.selectedAnswer = null;
       this.isAnyAnswerSelected = false;
     } else {
-      // Redirection vers '/end' car c'est la dernière question
       this.router.navigate(['/end']);
     }
   }

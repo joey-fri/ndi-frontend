@@ -9,8 +9,10 @@ import { Component } from '@angular/core';
 export class EndComponent {
   score = 1;
 
-  removeIdQuestion() {
-    localStorage.removeItem('id');
+  removeQuestions() {
+    for (let i = 1; i <= 5; i++) {
+      localStorage.removeItem('Question_' + i);
+    }
   }
 }
 

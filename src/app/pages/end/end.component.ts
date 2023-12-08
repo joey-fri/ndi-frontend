@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NdiBackendService } from 'src/app/services/ndi-backend/ndi-backend.service';
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-end',
@@ -6,17 +9,42 @@ import { Component } from '@angular/core';
   styleUrls: ['./end.component.scss']
 })
 
-export class EndComponent {
+export class EndComponent implements OnInit {
+  questions: any[] = [];
+
+  constructor(private ndiBackendService: NdiBackendService,
+    private translate: TranslateService, private router: Router) { }
+
+    selectedLanguage: string = localStorage.getItem('selectedLanguage') || 'FR';
+
+  async ngOnInit() {
+    await this.ndiBackendService.getQuestions(this.selectedLanguage).subscribe((data) => {
+      this.questions = data;
+    });
+
+  }
+
   getScore(){
-    let score = 0;
+    this.ngOnInit();
+    let res = 0;
     for(let i = 1; i <= 5; i++){
+      let nb_inf = 0
       let ourScore = parseInt(localStorage.getItem('Question_' + (i)) as string);
       for(let j = 0 ; j < 3 ; j++)
       {
-        score += parseInt(localStorage.getItem('Question_' + i) || '0');
+        const score = this.questions[i]['Score_' + (j)];
+        if (score > ourScore)
+          nb_inf++;
+      }
+      if (nb_inf == 1){
+        res = res + 1;
+      }
+      if (nb_inf == 0){
+        res = res + 2;
       }
     }
-    return score;
+
+    return res;
   }
 
   removeQuestions() {

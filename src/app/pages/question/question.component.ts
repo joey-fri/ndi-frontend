@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NdiBackendService } from 'src/app/services/ndi-backend/ndi-backend.service';
+import {GraphComponent} from "../../components/graph/graph.component";
 
 @Component({
   selector: 'app-question',
@@ -9,6 +10,8 @@ import { NdiBackendService } from 'src/app/services/ndi-backend/ndi-backend.serv
   styleUrls: ['./question.component.scss']
 })
 export class QuestionComponent implements OnInit {
+  @ViewChild(GraphComponent) graph: GraphComponent | undefined;
+
   questions: any[] = [];
   currentQuestionIndex: number = 0;
   selectedAnswer: number | null = null;
@@ -37,6 +40,7 @@ export class QuestionComponent implements OnInit {
     this.isAnyAnswerSelected = true;
     const score = this.questions[this.currentQuestionIndex]['Score_' + (index + 1)];
     localStorage.setItem('Question_' + (this.currentQuestionIndex + 1), score.toString());
+    this.graph?.handleUpdate();
     console.log(`Réponse sélectionnée : ${this.questions[this.currentQuestionIndex]['Answer_' + (index + 1)]}`);
   }
 

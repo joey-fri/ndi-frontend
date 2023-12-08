@@ -5,8 +5,7 @@
     overflow: hidden;
 }
 
-.div-noire {
-    background-color: black;
+.graph {
     flex: 0 0 40vh;
 }
 
@@ -54,7 +53,7 @@
         transition: background-color 0.3s ease;
 
         &.selected {
-            background-color: blue; 
+            background-color: blue;
             color: white;
         }
 
@@ -72,7 +71,7 @@
         font-size: 1.5rem;
         border: 0.0625rem solid #ddd;
     }
-    
+
 }
 
 @media (max-width: 768px) {

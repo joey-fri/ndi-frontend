@@ -87,23 +87,34 @@ export class GraphComponent {
   }
   setGraphMinValue() : void {
     // @ts-ignore
-    this.highchartsOptions.yAxis.min = Math.min(...this.values) - 5
+    this.highchartsOptions.yAxis.min = Math.min(...this.values) - 1
   }
   setGraphValues() : void {
-    this.values = []
-    const tempValues = []
-    for (let i = 1; i < 6; i++) {
-      const newValue : number = Math.floor(Math.random() * 100)-20
-      if (i != 1) {
-        const oldValue : number = tempValues[i - 2]
-        tempValues.push(oldValue + newValue)
-      } else {
-        tempValues.push(newValue)
-      }
-    }
-    this.values = tempValues
-    // @ts-ignore
-    this.highchartsOptions.series[0].data = this.values as any
-  }
 
+    this.values = []
+    const tempValues: any[] = []
+    for (let i = 1; i < 6; i++) {
+      let newValue : number | null = null
+      let newValueString : string | null = localStorage.getItem("Question_" + i)
+      if (newValueString == null) {
+        newValue = null
+      } else {
+        newValue = Number(localStorage.getItem("Question_" + i))
+      }
+      console.log("New value: " + newValue + " for i = " + i)
+      if (newValue != null) {
+        if (i != 1) {
+          const oldValue: number | null = tempValues[i - 2]
+          // @ts-ignore
+          tempValues.push(oldValue + newValue)
+        } else {
+          tempValues.push(newValue)
+        }
+      }
+      this.values = tempValues
+      console.log(this.values)
+      // @ts-ignore
+      this.highchartsOptions.series[0].data = this.values as any
+    }
+  }
 }

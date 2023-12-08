@@ -11,10 +11,18 @@ export class HomeComponent {
 
   constructor(
     private translate: TranslateService,
-  ) {}
+  ) {
+    this.removeQuestions();
+  }
 
   onLanguageChange(){
     localStorage.setItem('selectedLanguage', this.selectedLanguage);
     this.translate.use(this.selectedLanguage);
+  }
+
+  removeQuestions() {
+    for (let i = 1; i <= 5; i++) {
+      localStorage.removeItem('Question_' + i);
+    }
   }
 }

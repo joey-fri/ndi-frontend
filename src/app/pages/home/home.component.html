@@ -1,3 +1,13 @@
-<h1>Bienvenue sur la page d'accueil</h1>
-
-<button routerLink="/question">Aller à la Question</button>
+<div class="center-container">
+  <div class="button-container">
+    <h1 class="game-name">{{"HOME.GAMENAME" | translate}}</h1>
+    <mat-form-field>
+      <mat-select [(value)]="selectedLanguage"  (selectionChange)="onLanguageChange()">
+        <mat-option value="fr">Français</mat-option>
+        <mat-option value="en">English</mat-option>
+        <mat-option value="es">Espagñol</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button class="play-button" routerLink="/question" mat-raised-button color="warn">{{"HOME.START" | translate}}</button>
+  </div>
+</div>

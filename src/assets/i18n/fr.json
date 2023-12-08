@@ -1,3 +1,23 @@
 {
-    "START": "Jouer"
+  "HOME":
+  {
+    "START": "Jouer",
+    "GAMENAME": "Question pour un climat"
+  },
+  "END":
+  {
+    "RESTART": "Rejouer"
+  },
+  "QUESTION":
+  {
+    "END": "Terminer",
+    "NEXT": "Suivant"
+  },
+    "GRAPH": {
+      "TITLE": "Emissions de CO2",
+      "YAXIS": "Emissions de CO2",
+      "XAXIS": {
+        "QUESTION": "Question"
+      }
+    }
 }
